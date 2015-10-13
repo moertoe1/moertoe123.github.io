@@ -1,0 +1,16 @@
+<head>
+{% extends "base.html" %}
+{% load django_markdown %}
+
+
+<link href="/feed/" rel="alternate" type="application/rss+xml" title="Q Blog Feed" />
+</head>
+  <div class="post">
+    <h2>{{ object.title }}</h2>
+    <p class="meta">{{ object.created }} |
+  Tagged under {{ object.tags.all|join:", " }}
+	</p>
+    {{ object.body|markdown }}
+  </div>
+{% endfor %}
+{% endblock %}

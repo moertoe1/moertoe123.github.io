@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}Home{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="home" %}
+{% endblock %}
+
+{% block navbar-right %}
+  {% if not user.is_authenticated %}
+<a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
+<a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block splash %}
+  <div  iid="to-sign-up"class="jumbotron jumbotron-carousel corporate-jumbo">
+    <div class="container">
+      <div class="row" id="to-sign-up">
+        <div class="col-md-8 col-sm-8">
+          <h1>{% include "_brandname.html" %}</h1>
+          <p>Don't miss the oppertunity to Join this Incredible Confrence</p>
+    <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a>
+        </div>
+        <div class="col-md-4 col-sm-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+   
+{% endblock splash %}
+
+{% block container %}
+<!-- Benefits of the Django application -->
+<a name="about"></a>
+
+
+
+    <div id="who">
+      <div class="homepage">
+        <img src="static/site/img/logo2.png" alt="about us" title="about us">
+        <h2 id="who-are-we">Who We Are</h2>
+        <hr>
+        <p>We are <a href="#" target="_blank">SIISM</a>. working  on an extremely large web app  that needs to be able to host a confrence website and our goal is to </p><p> be able to provide a less formal yet sleek confrence web application. This conference Website is a clean and unique site with quick response and easy to use. </p>
+      </div>
+    </div>
+
+
+ <!-- Get involved sub section  page-->
+  <div id="get-involved">
+      <div class="container ">
+
+        <h2 id ="get-section">Get Involved</h2>
+        <hr>
+        <div class="row">
+          <div class="col-lg-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+            </span>
+              <h3>Become a Delegate</h3>
+              <p>The conference will be hosted at Stellenbosch University's picturesque Stias etc</p>
+              <p><a class="btn btn-primary" href="blog" role="button">View details &raquo;</a></p>
+          </div>
+
+     
+
+          <div class="col-lg-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3>Become an Author</h3>
+            <p>Don't just want to be an atendee at such an amazing confrence event. Why not submit a Paper on our confrence topics and possibly become one of our key speaker.</p>
+            <p><a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Author Signup&raquo;</a></p>
+          </div>
+
+
+          <div class="col-lg-4">
+            <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-clipboard fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3>Terms and conditions</h3>
+             <p>Please make sure that you Read our terms and conditions as they are very important. This site is very user friendly.</p>
+              <p><a class="btn btn-primary" href="terms-&-conditions.html" role="button">View details &raquo;</a></p>
+          </div>
+        
+        </div>
+      </div>
+  </div>
+  <div id="back-to-top">
+              <a href="/"><i class="fa fa-chevron-circle-up fa-3x"></i></a>
+  </div>
+  <script src="static/bootstrap/js/smoothscroll.js"></script>
+
+{% endblock container %}
+
+{% block scripts %}
+<script src="{% static 'site/js/site.js' %}"></script>
+{% endblock scripts %}
+

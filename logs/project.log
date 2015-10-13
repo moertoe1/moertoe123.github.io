@@ -1,0 +1,6 @@
+[11/Oct/2015 05:38:38] INFO [/Users/Home/siism2015/src/profiles/signals.py:17] New user profile for Root <admin@admin.com> created
+[11/Oct/2015 14:12:00] INFO [/Users/Home/siism2015/src/profiles/signals.py:17] New user profile for dadad <dada@dada.com> created
+[11/Oct/2015 14:47:38] INFO [/Users/Home/siism2015/src/profiles/signals.py:17] New user profile for  <dummy@example.com> created
+[11/Oct/2015 14:48:29] INFO [/Users/Home/siism2015/src/profiles/signals.py:17] New user profile for  <dummy@example.com> created
+[11/Oct/2015 15:57:37] INFO [/Users/Home/siism2015/src/profiles/signals.py:17] New user profile for  <dummy@example.com> created
+[12/Oct/2015 03:18:44] INFO [/Users/Home/_na_lourens/siism2015/src/profiles/signals.py:17] New user profile for Sebastian Silbernagl <s@s.za> created
